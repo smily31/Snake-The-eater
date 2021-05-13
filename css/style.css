@@ -1,0 +1,85 @@
+
+/* default setting  */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*body is the whole background on which board game will occur*/
+.body{
+    background: url('../img/bg.jpg');       /*sirf itne se bg nhi aayega qki height width nhi diya gya hai*/
+    min-height: 100vh;          /*yaha hmne div ko 100% viewport height de di hai*/
+    background-size: 100vw 100vh;    /*bg ke size ko bhi full rkha hai taki img ache se cover ho jaye*/
+    display: flex;  /*body ko flexbox bana rhe taki elements ko asani se align kr ske */
+    justify-content: center;  /*body ko horizotally center kr rhe*/
+    align-items: center;   /*body ko vertically center kr rhe*/
+}
+
+#scoreBox{
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    font-size: 54px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    color: rgb(241, 44, 120);
+    text-shadow: 4px 0px 4px  yellow;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 110px;
+    right: 39px;
+    font-size: 56px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    color: rgb(241, 44, 120);
+    text-shadow: 4px 0px 4px yellow;
+}
+
+/*board -> here we play the game*/
+#board{
+    background: linear-gradient(rgb(185, 173, 252),rgb(245, 110, 110));
+    height: 88vmin;
+    width: 85vmin;
+    border: 4px solid yellow;
+    border-radius: 5%;
+    /* Now we are going to make our board a grid of 18 rows and columns */
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+
+/*this is the snake head*/
+.head{
+    background:linear-gradient(rgb(105, 9, 9),red) ;
+    border: 2px solid red;
+    border-radius: 10px;
+    transform: scale(1.02);
+}
+
+/* this is the snake body  */
+.snakebody{
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+/*this is food*/
+.food{
+    background: linear-gradient(yellow,orangered);
+    border: 2px solid rgb(247, 247, 144);
+    border-radius: 50%;
+}
+
+#name{
+    position: absolute;
+    top: -12px;
+    left: 39px;
+    font-size: 56px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    color: rgb(18, 33, 99);
+    text-shadow: 6px 0px 4px rgb(124, 215, 243);
+}
+
